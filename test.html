@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/admin-base.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <style>
+        /*上传文件样式*/
+       .upload-wrap-form-text{
+           position: relative;
+           padding: 5px 10px;
+           display: inline-block;
+           cursor: pointer;
+           background: #BCBCBC;
+           color: black;
+           border: 1px solid black;
+       }
+
+       .upload-wrap-form-text input{
+           position: absolute;
+           right: 0;
+           top: 0;
+           width: 100px;
+           opacity: 0;
+           filter: alpha(opacity=0);
+       }
+
+       .upload-wrap-form-text-showFileName{
+           display: inline-block;
+           padding: 5px 10px;
+       }
+
+       .file-upload-submit{
+            position: absolute;
+            left: 10rem;
+            display: inline-block;
+            padding: 5px 15px;
+            border: 1px solid black;
+            background:#66CC66 ;
+            margin-left: 100px;
+        }
+
+       .upload-wrap-form{
+            margin: 0;
+            padding: 0;
+        }
+
+       .upload-wrap{
+            display: inline-block;
+        }
+
+       .upload{
+            position: relative;
+            border: none;
+        }
+       /*清除浮动*/
+       .clearfix:after{
+           content: ".";
+           display:block;
+           height:0px; /*一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；*/
+           clear: both;
+           visibility: hidden;
+       }
+
+       .clearfix{
+           zoom: 1;
+       }
+    </style>
+
+</head>
+<body>
+    <div class="upload clearfix">
+        <div class="upload-wrap">
+            <form class="upload-wrap-form" name="file_upload_name"  method="post" enctype="multipart/form-data">
+                <div class="upload-wrap-form-text"><input type="file" name="file_upload"/>导入打款文件</div>
+            </form>
+        </div>
+        <div class="upload-wrap-form-text-showFileName"></div>
+        <div  class="file-upload-submit" >核对</div>
+    </div>
+</body>
+<script>
+    $(".upload-wrap-form-text").on("change","input[type='file']",function(e){
+        var filePath=$(this).val();
+        if(filePath.indexOf("xlsx")!=-1||filePath.indexOf("xls")!=-1){
+            var arr=filePath.split('\\');
+            var fileName=arr[arr.length-1];
+            $(".upload-wrap-form-text-showFileName").html(fileName);
+        }else{
+            $(".upload-wrap-form-text-showFileName").html("您未上传文件，或者您上传文件类型有误!");
+            return false
+        }
+    });
+    $(".field").change(function(){
+        $(this).css("background-color","#FFFFCC");
+    });
+</script>
+</html>

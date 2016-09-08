@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "web-jsptaglibrary_1_1.dtd" >
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>ll</shortname>
+	<uri>/lianlian</uri>
+	<tag>
+		<name>textfield</name>
+		<tagclass>com.lianpay.share.ui.TextField</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>文本框</info>
+		<!-- 显示的长度 -->
+		<attribute>
+			<name>size</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 输入数据的最大长度 -->
+		<attribute>
+			<name>maxlength</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 名称（与模型里的字段名保持一致） -->
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 类型 -->
+		<attribute>
+			<name>type</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 标题 -->
+		<attribute>
+			<name>title</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 可否编辑 -->
+		<attribute>
+			<name>writeable</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为空 -->
+		<attribute>
+			<name>checknull</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为整形 -->
+		<attribute>
+			<name>checkint</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否校验中文 -->
+        <attribute>
+            <name>checkchinese</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+         <!-- 是否校验金额-->
+        <attribute>
+            <name>checkamt</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+		<!-- 检查是否是带点的整数 -->
+		<attribute>
+			<name>checkintext</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为数字 -->
+		<attribute>
+			<name>checknumber</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为电话 -->
+		<attribute>
+			<name>checkphone</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为手机 -->
+		<attribute>
+			<name>checkmobile</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查是文件名 -->
+		<attribute>
+			<name>checkfilename</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为电子邮件 -->
+		<attribute>
+			<name>checkemail</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为邮编 -->
+		<attribute>
+			<name>checkzipcode</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为身份证号 -->
+		<attribute>
+			<name>checkidcard</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为日期 -->
+		<attribute>
+			<name>checkdate</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 检查最小长度 -->
+		<attribute>
+			<name>minlength</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 扩展 -->
+		<attribute>
+			<name>append</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>select</name>
+		<tagclass>com.lianpay.share.ui.Select</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>下拉列表</info>
+		<!-- 名称（与模型里的字段名保持一致） -->
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 标题 -->
+		<attribute>
+			<name>title</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 数据源 -->
+		<attribute>
+			<name>list</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 选项的值 -->
+		<attribute>
+			<name>key</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 选项显示的内容 -->
+		<attribute>
+			<name>itemname</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 默认选定的值 -->
+		<attribute>
+			<name>topid</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 默认选项显示的内容 -->
+		<attribute>
+			<name>topvalue</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 宽度 -->
+		<attribute>
+			<name>width</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 是否检查为空 -->
+		<attribute>
+			<name>checknull</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 选择时出发的事件 -->
+		<attribute>
+			<name>script</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 可否编辑 -->
+		<attribute>
+			<name>writeable</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>datefield</name>
+		<tagclass>com.lianpay.share.ui.DateField</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>日期</info>
+		<!-- 名称（与模型里的字段名保持一致） -->
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 标题 -->
+		<attribute>
+			<name>title</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 可否编辑 -->
+		<attribute>
+			<name>writeable</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>textarea</name>
+		<tagclass>com.lianpay.share.ui.TextArea</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>文本域</info>
+		<!-- 名称（与模型里的字段名保持一致） -->
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 标题 -->
+		<attribute>
+			<name>title</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 显示的行数 -->
+		<attribute>
+			<name>rows</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 显示的列数 -->
+		<attribute>
+			<name>cols</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 输入的最多内容 -->
+		<attribute>
+			<name>maxlength</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 输入的最少内容 -->
+		<attribute>
+			<name>minlength</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 可否编辑 -->
+		<attribute>
+			<name>writeable</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>checkbox</name>
+		<tagclass>com.lianpay.share.ui.CheckBox</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>复选框</info>
+		<!-- 名称（与模型里的字段名保持一致） -->
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 标题 -->
+		<attribute>
+			<name>title</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 数据源 -->
+		<attribute>
+			<name>list</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 选项的值 -->
+		<attribute>
+			<name>key</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 选项显示的内容 -->
+		<attribute>
+			<name>itemname</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 一行显示的列数 -->
+		<attribute>
+			<name>colnum</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 可否编辑 -->
+		<attribute>
+			<name>writeable</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>radio</name>
+		<tagclass>com.lianpay.share.ui.Radio</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>单选框</info>
+		<!-- 名称（与模型里的字段名保持一致） -->
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 标题 -->
+		<attribute>
+			<name>title</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 数据源 -->
+		<attribute>
+			<name>list</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 选项的值 -->
+		<attribute>
+			<name>key</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 选项显示的内容 -->
+		<attribute>
+			<name>itemname</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 一行显示的列数 -->
+		<attribute>
+			<name>colnum</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<!-- 可否编辑 -->
+		<attribute>
+			<name>writeable</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>
